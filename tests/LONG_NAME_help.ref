@@ -1,0 +1,7 @@
+Usage: SHORT_NAME [--help] [--version]
+
+Linux command-line utility which SHORT_DESCRIPTION.
+
+Optional arguments:
+  -h, --help     shows help message and exits 
+  -v, --version  prints version information and exits 
