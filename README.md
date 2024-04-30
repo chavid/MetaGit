@@ -1,11 +1,11 @@
 
 # Linux Utility template
 
-Linux command-line utility which SHORT_DESCRIPTION. 
+Linux command-line utility which apply git commands in a hierarchy of git repositories.. 
 
 The key features are:
--  ;
-- .
+- recursive visit of the directories ;
+- git repositories can be nested.
 
 
 ## Credits
@@ -23,7 +23,7 @@ It can be compiled with any compiler supporting C++20.
 
 ## Fast and dirty guide
 
-See `SHORT_NAME --help`.
+See `mgit --help`.
 
 The [complete guide](tests/USERGUIDE.md) is UNDER WORK also...
 

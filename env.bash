@@ -16,5 +16,5 @@ cd ${ORIGINAL_DIR}
 # exportable aliases
 
 export UTILITY_DIR
-SHORT_NAME () { ${UTILITY_DIR}/build/LONG_NAME.exe $* ; }
-export -f SHORT_NAME
+mgit () { ${UTILITY_DIR}/build/meta_git.exe $* ; }
+export -f mgit

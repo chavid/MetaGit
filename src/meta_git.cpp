@@ -1,11 +1,11 @@
 
 /*
 
-Linux command-line utility which SHORT_DESCRIPTION.
+Linux command-line utility which apply git commands in a hierarchy of git repositories..
 
 The key features are:
--  ;
-- .
+- recursive visit of the directories ;
+- git repositories can be nested.
 
 */
 
@@ -21,8 +21,8 @@ The key features are:
 int main( int argc, char const* argv[] )
  {
   // Parse arguments
-  argparse::ArgumentParser program("SHORT_NAME", "0.1", argparse::default_arguments::all);
-  program.add_description("Linux command-line utility which SHORT_DESCRIPTION.");
+  argparse::ArgumentParser program("mgit", "0.1", argparse::default_arguments::all);
+  program.add_description("Linux command-line utility which apply git commands in a hierarchy of git repositories..");
   try
    {
     program.parse_args(argc, argv);

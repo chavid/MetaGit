@@ -3,7 +3,7 @@
 
 targets = [
 
-    { "name" : "LONG_NAME_help" , "command" : "SHORT_NAME --help" },
+    { "name" : "meta_git_help" , "command" : "mgit --help" },
 
 ]
 

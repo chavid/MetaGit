@@ -1,6 +1,6 @@
-Usage: SHORT_NAME [--help] [--version]
+Usage: mgit [--help] [--version]
 
-Linux command-line utility which SHORT_DESCRIPTION.
+Linux command-line utility which apply git commands in a hierarchy of git repositories..
 
 Optional arguments:
   -h, --help     shows help message and exits 
