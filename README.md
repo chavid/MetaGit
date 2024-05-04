@@ -1,5 +1,5 @@
 
-# Linux Utility template
+# Meta git
 
 Linux command-line utility which apply git commands in a hierarchy of git repositories.. 
 
