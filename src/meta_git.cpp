@@ -39,7 +39,7 @@ int main( int argc, char const* argv[] )
    }
 
   // Interpret arguments
-  auto cmd { join(program.get<std::vector<std::string>>("cmd")) } ;
+  auto cmd { std::format("git {}",join(program.get<std::vector<std::string>>("cmd"))) } ;
 
   // Recursively scan the top directory
   DirectoryScan top_dir(fs::current_path().string()) ;
