@@ -21,12 +21,20 @@ The key features are:
 
 int main( int argc, char const* argv[] )
  {
+  constexpr auto version { "0.2" } ;
+
   // Parse arguments
-  argparse::ArgumentParser program("mgit", "0.1", argparse::default_arguments::all);
+  argparse::ArgumentParser program("mgit", version, argparse::default_arguments::none);
   program.add_description("Linux command-line utility which apply git commands in a hierarchy of git repositories..");
+  program.add_argument("--meta-help")
+    .help("shows help message and exits")
+    .flag();
+  program.add_argument("--meta-version")
+    .help("prints version information and exits")
+    .flag();
   program.add_argument("cmd")
-    .nargs(argparse::nargs_pattern::any)
-    .help("the command to apply in each embedded git repository."); 
+    .remaining()
+    .help("the git command to apply in each embedded git repository."); 
   try
    {
     program.parse_args(argc, argv);
@@ -39,6 +47,16 @@ int main( int argc, char const* argv[] )
    }
 
   // Interpret arguments
+  if (program.get<bool>("--meta-help"))
+   {
+    std::cout << program.help().str();
+    std::exit(0);
+   }
+  if (program.get<bool>("--meta-version"))
+   {
+    std::cout << version << std::endl;
+    std::exit(0);
+   }
   auto cmd { std::format("git {}",join(program.get<std::vector<std::string>>("cmd"))) } ;
 
   // Recursively scan the top directory
